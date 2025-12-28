@@ -1,0 +1,50 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.subtitle {
+    color: #666;
+}
+
+section {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+}
