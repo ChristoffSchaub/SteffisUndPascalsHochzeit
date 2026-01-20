@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: #fafafa;
     color: #333;
-    background-image: url("hochzeit.jpg");
+    background-image: url("hochzeit.jpeg");
     background-size: cover;        /* füllt den ganzen Bildschirm */
     background-position: center;   /* zentriert */
     background-repeat: no-repeat;
