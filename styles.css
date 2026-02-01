@@ -5,8 +5,8 @@ body {
     background: #fafafa;
     color: #333;
     background-image: url("hochzeit.jpeg");
-    background-size: cover;        /* füllt den ganzen Bildschirm */
-    background-position: center;   /* zentriert */
+    background-size: contain;        /* füllt den ganzen Bildschirm */
+    background-position: center top;   /* zentriert */
     background-repeat: no-repeat;
     background-attachment: fixed;  
 }
