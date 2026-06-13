@@ -16,6 +16,95 @@ body {
 }
 
 /* --------------------
+   PASSWORT-OVERLAY
+-------------------- */
+
+.pw-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+@keyframes pw-fade-out {
+    to { opacity: 0; pointer-events: none; }
+}
+
+.pw-overlay.pw-fade-out {
+    animation: pw-fade-out 0.4s ease forwards;
+}
+
+.pw-box {
+    text-align: center;
+    max-width: 360px;
+    width: 100%;
+}
+
+.pw-logo {
+    font-size: 3rem;
+    margin: 0 0 0.25rem;
+}
+
+.pw-box h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+}
+
+.pw-box > p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+#pw-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#pw-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#pw-input:focus {
+    border-color: #b8935a;
+}
+
+.pw-error {
+    display: none;
+    color: #c0392b;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+#pw-form button {
+    padding: 0.75rem 1.5rem;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#pw-form button:hover {
+    background: #444;
+}
+
+/* --------------------
    NAVBAR
 -------------------- */
 

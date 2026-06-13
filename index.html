@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<!-- PASSWORT-OVERLAY -->
+<div class="pw-overlay" id="pw-overlay">
+    <div class="pw-box">
+        <p class="pw-logo">💍</p>
+        <h2>Steffi &amp; Pascal</h2>
+        <p>Bitte gebt das Passwort ein, um die Seite zu öffnen.</p>
+        <form id="pw-form" autocomplete="off">
+            <input type="password" id="pw-input" placeholder="Passwort" autocomplete="current-password">
+            <p class="pw-error" id="pw-error">Falsches Passwort – bitte nochmal versuchen.</p>
+            <button type="submit">Weiter →</button>
+        </form>
+    </div>
+</div>
+
 <!-- NAVIGATION -->
 <nav class="navbar" id="navbar">
     <a class="nav-logo" href="#wir-heiraten">Steffi &amp; Pascal</a>
@@ -47,14 +61,14 @@
             </p>
             <div class="info-badges">
                 <div class="badge">
-                    <span class="badge-icon">🏊</span>
+                    <span class="badge-icon">🌴</span>
                     <div>
                         <strong>Motto</strong>
                         <p>Poolparty</p>
                     </div>
                 </div>
                 <div class="badge">
-                    <span class="badge-icon">🎀</span>
+                    <span class="badge-icon">🍦</span>
                     <div>
                         <strong>Dresscode</strong>
                         <p>Weiß &amp; Creme</p>
@@ -105,7 +119,7 @@
                 </a>
 
                 <div class="info-box">
-                    <h4>🏊 Poolparty im Garten</h4>
+                    <h4>🌴 Poolparty im Garten</h4>
                     <ul>
                         <li>Bitte <strong>Badebekleidung</strong> mitbringen</li>
                         <li>Handtücher werden nicht gestellt</li>
@@ -155,28 +169,23 @@
         <p>
             Bei Fragen zu Spielen, Geschenken, Überraschungen oder der Organisation<br>
             wendet euch gerne an unsere Trauzeugen – die wissen Bescheid!
+            Wer die Nummern nicht hat, kann sich gerne bei mir melden!
         </p>
         <div class="contact-cards">
             <div class="contact-card">
                 <div class="contact-avatar">👰</div>
                 <h3>Trauzeugin Manuela</h3>
                 <p>Ansprechpartnerin für Steffis Seite</p>
-                <a class="button button-sm" href="tel:+49000000000">📞 Anrufen</a>
-                <a class="button button-sm" href="mailto:trauzeugin@example.com">✉️ Schreiben</a>
             </div>
             <div class="contact-card">
                 <div class="contact-avatar">👰</div>
                 <h3>Trauzeugin Vanessa</h3>
-                <p>Ansprechpartnerin für Steffis Seite</p>
-                <a class="button button-sm" href="tel:+49000000000">📞 Anrufen</a>
-                <a class="button button-sm" href="mailto:trauzeugin@example.com">✉️ Schreiben</a>
+                <p>Ansprechpartnerin für Steffis Seite</p>    
             </div>
             <div class="contact-card">
                 <div class="contact-avatar">🤵</div>
                 <h3>Trauzeuge Klopfer</h3>
                 <p>Ansprechpartner für Pascals Seite</p>
-                <a class="button button-sm" href="tel:+49000000001">📞 Anrufen</a>
-                <a class="button button-sm" href="mailto:trauzeuge@example.com">✉️ Schreiben</a>
             </div>
         </div>
     </div>
@@ -187,6 +196,31 @@
 </footer>
 
 <script>
+    // --- PASSWORT-SCHUTZ ---
+    const CORRECT_PASSWORD = 'SteffiXPasi2026'; // <-- hier Passwort ändern
+    const overlay = document.getElementById('pw-overlay');
+    const pwForm  = document.getElementById('pw-form');
+    const pwInput = document.getElementById('pw-input');
+    const pwError = document.getElementById('pw-error');
+
+    if (sessionStorage.getItem('pw_ok') === '1') {
+        overlay.style.display = 'none';
+    }
+
+    pwForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (pwInput.value === CORRECT_PASSWORD) {
+            sessionStorage.setItem('pw_ok', '1');
+            overlay.classList.add('pw-fade-out');
+            overlay.addEventListener('animationend', () => overlay.style.display = 'none', { once: true });
+        } else {
+            pwError.style.display = 'block';
+            pwInput.value = '';
+            pwInput.focus();
+        }
+    });
+
+    // --- BURGER MENÜ ---
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('nav-links');
 
