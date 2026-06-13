@@ -9,10 +9,444 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0;
+    padding-top: 64px;
     background: #fafafa;
     color: #333;
     line-height: 1.6;
 }
+
+/* --------------------
+   NAVBAR
+-------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    background: rgba(250, 250, 250, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.navbar.scrolled {
+    border-bottom-color: #e0e0e0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+.nav-logo {
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #b8935a;
+}
+
+/* --------------------
+   BURGER BUTTON
+-------------------- */
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --------------------
+   SECTIONS
+-------------------- */
+
+.section {
+    padding: 5rem 0;
+}
+
+.section.light {
+    background: #f2f2f2;
+}
+
+section[id] {
+    scroll-margin-top: 72px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* --------------------
+   SPLIT SECTION
+-------------------- */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.split img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* --------------------
+   STACK SECTION (always vertical)
+-------------------- */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.stack img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.stack .info-badges {
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.stack .dresscode-image img {
+    max-width: 560px;
+}
+
+/* --------------------
+   INFO BADGES
+-------------------- */
+
+.info-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    flex: 1;
+    min-width: 130px;
+}
+
+.badge-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.badge strong {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #999;
+}
+
+.badge p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --------------------
+   INFO BOX
+-------------------- */
+
+.info-box {
+    margin-top: 1.5rem;
+    background: #fff;
+    border-left: 3px solid #b8935a;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+}
+
+.info-box h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.info-box p {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+}
+
+.info-box ul {
+    margin: 0.25rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.info-box li {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+/* --------------------
+   DRESSCODE IMAGE
+-------------------- */
+
+.dresscode-image {
+    margin-top: 3rem;
+}
+
+.dresscode-image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* --------------------
+   BUTTONS
+-------------------- */
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid #222;
+    color: #222;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+    background: #222;
+    color: #fff;
+}
+
+.button-sm {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.85rem;
+}
+
+/* --------------------
+   BUTTON GROUP
+-------------------- */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
+/* --------------------
+   CONTACT CARDS
+-------------------- */
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-avatar {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contact-card p {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0.5rem;
+}
+
+.contact-card .button {
+    margin-top: 0.5rem;
+}
+
+/* --------------------
+   FOOTER
+-------------------- */
+
+footer {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --------------------
+   RESPONSIVE
+-------------------- */
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(250, 250, 250, 0.98);
+        border-top: 1px solid #e0e0e0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        padding: 0.5rem 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-card {
+        max-width: 100%;
+    }
+}
+
 
 /* --------------------
    HERO

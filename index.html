@@ -2,92 +2,203 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Steffi & Pascal – Hochzeit</title>
+    <title>Steffi &amp; Pascal – Hochzeit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- HERO -->
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+    <a class="nav-logo" href="#wir-heiraten">Steffi &amp; Pascal</a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#wir-heiraten">Wir heiraten</a></li>
+        <li><a href="#zusage">Zusage</a></li>
+        <li><a href="#location">Anfahrt &amp; Location</a></li>
+        <li><a href="#fotos">Fotos</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
 
-<section class="section">
-    <div class="container split">
+<!-- SECTION 1: WIR HEIRATEN -->
+<section class="section" id="wir-heiraten">
+    <div class="container stack">
         <div class="image">
             <img src="steffipascal.jpeg" alt="Steffi und Pascal">
         </div>
         <div class="text">
-            <h1>Steffi & Pascal</h1>
-        <p class="hero-date">Wir heiraten 💍</p>
-        <p class="hero-subtitle">Wir freuen uns, diesen besonderen Tag mit euch zu teilen</p>
-        </div>
-    </div>
-</section>
-
-
-<!-- STORY / IMAGE + TEXT -->
-<section class="section">
-    <div class="container split">
-        <div class="image">
-            <img src="hochzeit.jpeg" alt="Steffi und Pascal">
-        </div>
-        <div class="text">
-            <h2>Unsere Hochzeit</h2>
-            <p>
-                Gemeinsam mit euch möchten wir einen unvergesslichen Tag feiern.
-                Hier findet ihr alle wichtigen Informationen rund um unsere Hochzeit.
+            <h1>Steffi &amp; Pascal</h1>
+            <p class="hero-date">Wir heiraten 💍</p>
+            <p class="hero-subtitle">
+                Wir freuen uns riesig, diesen besonderen Tag mit euch zu feiern –
+                gemeinsam, ausgelassen und unvergesslich schön.
             </p>
+            <div class="info-badges">
+                <div class="badge">
+                    <span class="badge-icon">🏊</span>
+                    <div>
+                        <strong>Motto</strong>
+                        <p>Poolparty</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🎀</span>
+                    <div>
+                        <strong>Dresscode</strong>
+                        <p>Weiß &amp; Creme</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🔞</span>
+                    <div>
+                        <strong>Adults Only</strong>
+                        <p>Ab 18 Jahren</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="hochzeit.jpeg" alt="Dresscode-Infos: Weiß und Creme">
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ABLAUF -->
-<section class="section light">
-    <div class="container">
-        <h2>📅 Ablauf</h2>
-        <ul class="timeline">
-            <li><strong>14:00</strong> – Sektempfang</li>
-            <li><strong>18:00</strong> – Dinner</li>
-            <li><strong>20:00</strong> – Party 🎉</li>
-        </ul>
-    </div>
-</section>
-
-<!-- LOCATION -->
-<section class="section">
-    <div class="container">
-        <h2>📍 Location</h2>
-        <p>Traumhaus Steffi & Pascal</p>
-        <a class="button" href="https://maps.app.goo.gl/aZ2Roovh3VT77die7" target="_blank">
-            Zur Navigation
+<!-- SECTION 2: ZUSAGE + ESSENSVORLIEBEN -->
+<section class="section light" id="zusage">
+    <div class="container center-text">
+        <h2>✉️ Zusage &amp; Essensvorlieben</h2>
+        <p>
+            Bitte gebt uns bis zum <strong>[Datum eintragen]</strong> Bescheid, ob ihr dabei seid.<br>
+            Teilt uns dabei auch eure Essensvorlieben oder -unverträglichkeiten mit –
+            damit für alle gesorgt ist.
+        </p>
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSclqI0-EUsNfBrP1-Arxorj3vcfpO3asQIe5Jai6OZ1CaezXQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+            Zum Formular
         </a>
     </div>
 </section>
 
-<!-- RSVP -->
-<section class="section light">
+<!-- SECTION 3: ANFAHRT & LOCATION -->
+<section class="section" id="location">
     <div class="container">
-        <h2>✉️ Zusage / Absage</h2>
-        <p>Bitte gebt uns kurz Bescheid, ob ihr dabei seid:</p>
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSclqI0-EUsNfBrP1-Arxorj3vcfpO3asQIe5Jai6OZ1CaezXQ/viewform?usp=publish-editor" target="_blank">
-            Formular ausfüllen
-        </a>
+        <h2>📍 Anfahrt &amp; Location</h2>
+        <div class="stack">
+            <div class="image">
+                <img src="wegbeschreibung .png" alt="Location – Platzhalterbild">
+            </div>
+            <div class="text">
+                <h3>Traumhaus Steffi &amp; Pascal</h3>
+                <a class="button" href="https://maps.app.goo.gl/uwjPCxxj1WCkJfaP7" target="_blank" rel="noopener noreferrer">
+                    Navigation öffnen
+                </a>
+
+                <div class="info-box">
+                    <h4>🏊 Poolparty im Garten</h4>
+                    <ul>
+                        <li>Bitte <strong>Badebekleidung</strong> mitbringen</li>
+                        <li>Handtücher werden nicht gestellt</li>
+                        <li>Umkleidekabinen sind vorhanden</li>
+                        <li>Jacken &amp; Taschen können im <strong>Wintergarten</strong> untergebracht werden</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>🏨 Hotels in der Nähe</h4>
+                    <p>Für alle, die von weiter anreisen – hier findet ihr Unterkünfte in der Nähe:</p>
+                    <a class="button button-sm" href="https://www.google.com/maps/search/hotels+naehe+90547+Stein" target="_blank" rel="noopener noreferrer">
+                        Hotels suchen
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- FOTOS -->
-<section class="section">
-    <div class="container">
-        <h2>📸 Fotos teilen</h2>
-        <p>Ladet hier gerne eure Fotos vom Tag hoch:</p>
-        <a class="button" href="https://photos.app.goo.gl/h6kqJniHqHzW9fe36" target="_blank">
-            Fotos hochladen
-        </a>
+<!-- SECTION 4: FOTOS -->
+<section class="section light" id="fotos">
+    <div class="container center-text">
+        <h2>📸 Fotos erwünscht!</h2>
+        <p>
+            Haltet den Tag in Erinnerung – wir freuen uns über jeden Schnappschuss von euch!<br>
+            Ladet eure Bilder hoch, schaut euch die Fotobox-Aufnahmen an oder ladet die Fotos des Fotografen herunter.
+        </p>
+        <div class="button-group">
+            <a class="button" href="https://photos.app.goo.gl/h6kqJniHqHzW9fe36" target="_blank" rel="noopener noreferrer">
+                📤 Eigene Fotos hochladen
+            </a>
+            <a class="button" href="#" target="_blank" rel="noopener noreferrer">
+                🤳 Fotobox-Bilder ansehen
+            </a>
+            <a class="button" href="#" target="_blank" rel="noopener noreferrer">
+                📷 Fotos vom Fotografen
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5: KONTAKT -->
+<section class="section" id="kontakt">
+    <div class="container center-text">
+        <h2>💬 Kontakt &amp; Anfragen</h2>
+        <p>
+            Bei Fragen zu Spielen, Geschenken, Überraschungen oder der Organisation<br>
+            wendet euch gerne an unsere Trauzeugen – die wissen Bescheid!
+        </p>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="contact-avatar">👰</div>
+                <h3>Trauzeugin Manuela</h3>
+                <p>Ansprechpartnerin für Steffis Seite</p>
+                <a class="button button-sm" href="tel:+49000000000">📞 Anrufen</a>
+                <a class="button button-sm" href="mailto:trauzeugin@example.com">✉️ Schreiben</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-avatar">👰</div>
+                <h3>Trauzeugin Vanessa</h3>
+                <p>Ansprechpartnerin für Steffis Seite</p>
+                <a class="button button-sm" href="tel:+49000000000">📞 Anrufen</a>
+                <a class="button button-sm" href="mailto:trauzeugin@example.com">✉️ Schreiben</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-avatar">🤵</div>
+                <h3>Trauzeuge Klopfer</h3>
+                <p>Ansprechpartner für Pascals Seite</p>
+                <a class="button button-sm" href="tel:+49000000001">📞 Anrufen</a>
+                <a class="button button-sm" href="mailto:trauzeuge@example.com">✉️ Schreiben</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer>
     <p>Danke, dass ihr diesen Tag mit uns verbringt 💛</p>
 </footer>
+
+<script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        burger.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            burger.classList.remove('open');
+            burger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+</script>
 
 </body>
 </html>
