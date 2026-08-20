@@ -159,6 +159,11 @@ body {
     color: #b8935a;
 }
 
+.nav-links .nav-update {
+    color: #9b7238;
+    font-weight: 700;
+}
+
 /* --------------------
    BURGER BUTTON
 -------------------- */
@@ -250,6 +255,126 @@ h3 {
     font-size: 1rem;
     color: #555;
     margin-bottom: 0;
+}
+
+/* --------------------
+   LAST UPDATE
+-------------------- */
+
+.update-section {
+    background: linear-gradient(145deg, #f7f1e7 0%, #fffdf9 55%, #f3eadc 100%);
+    border-bottom: 1px solid #e8dcc9;
+}
+
+.update-container {
+    max-width: 1000px;
+}
+
+.update-heading {
+    max-width: 820px;
+    margin: 0 auto 2.25rem;
+    text-align: center;
+}
+
+.update-label {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: #b8935a;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.update-heading h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    line-height: 1.25;
+}
+
+.update-heading p {
+    margin: 0.7rem 0 0;
+}
+
+.update-heading .update-intro {
+    font-size: 1.08rem;
+}
+
+.update-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.update-card {
+    padding: 1.35rem 1.5rem;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #e7dac7;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(92, 70, 38, 0.06);
+}
+
+.update-card-important {
+    grid-column: 1 / -1;
+    border: 2px solid #b8935a;
+    background: #fffaf2;
+}
+
+.update-card h2 {
+    margin: 0 0 0.65rem;
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.update-card p {
+    margin: 0 0 0.7rem;
+    font-size: 0.95rem;
+}
+
+.update-card p:last-child {
+    margin-bottom: 0;
+}
+
+.update-checklist {
+    max-width: 720px;
+    margin: 1.5rem auto 0;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(92, 70, 38, 0.07);
+}
+
+.update-checklist h2 {
+    margin: 0 0 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.update-checklist ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.update-checklist li {
+    font-size: 0.95rem;
+}
+
+.update-closing {
+    max-width: 780px;
+    margin: 2rem auto 0;
+    text-align: center;
+    font-size: 1.08rem;
+}
+
+.update-closing p {
+    margin: 0.45rem 0;
 }
 
 /* --------------------
@@ -598,7 +723,7 @@ footer {
    RESPONSIVE
 -------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .burger {
         display: flex;
     }
@@ -641,6 +766,20 @@ footer {
 
     .contact-card {
         max-width: 100%;
+    }
+
+    .update-grid,
+    .update-checklist ul {
+        grid-template-columns: 1fr;
+    }
+
+    .update-card-important {
+        grid-column: auto;
+    }
+
+    .update-card,
+    .update-checklist {
+        padding: 1.15rem;
     }
 }
 
